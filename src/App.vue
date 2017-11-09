@@ -8,7 +8,7 @@
   
     <div>
       <ul>
-        <li v-for="personName of names" 
+        <li v-for="personName of persons" 
         v-bind:key="personName['.key']">
         <p>{{personName.name}}</p>
 
@@ -45,7 +45,7 @@ export default {
     }
   },
   firebase: {
-    names: namesRef
+    persons: namesRef
   },
   methods: {
     submitName() {
