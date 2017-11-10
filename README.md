@@ -1,6 +1,8 @@
-# v-fire
+# Vue-Firebase-Base
 
 > CRUD with Vue and Firebase
+
+Original is based on Paul Halliday's [tutorial.](https://www.youtube.com/watch?v=831zOI02Q_0)
 
 ## Build Setup
 
