@@ -7,7 +7,7 @@ const app = initializeApp({
     projectId: "fir-vue-199a8",
     storageBucket: "fir-vue-199a8.appspot.com",
     messagingSenderId: "368975589989"
-  });
+  })
 
-  export const db = app.database();
-  export const namesRef = db.ref('persons');
+  export const db = app.database()
+  export const namesRef = db.ref('persons')

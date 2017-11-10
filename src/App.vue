@@ -35,7 +35,7 @@
 
 <script>
 
-import { namesRef } from './firebase';
+import { namesRef } from './firebase'
 
 export default {
   name: 'app',
