@@ -10,9 +10,22 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
-    "firebase": "^4.6.1",
-    "vue": "^2.4.4",
-    "vuefire": "^1.4.4"
+    "firebase": "^4.13.1",
+    "vue": "^2.5.17",
+    "vuefire": "^1.4.5"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:vue/essential"
+    ],
+    "rules": {
+      "vue/no-unused-vars": "error"
+    }
   },
   "browserslist": [
     "> 1%",
@@ -20,18 +33,20 @@
     "not ie <= 8"
   ],
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.6.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-stage-3": "^6.24.1",
-    "cross-env": "^5.0.5",
-    "css-loader": "^0.28.7",
-    "file-loader": "^1.1.4",
-    "node-sass": "^4.5.3",
-    "sass-loader": "^6.0.6",
-    "vue-loader": "^13.0.5",
-    "vue-template-compiler": "^2.4.4",
-    "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.9.1"
+    "cross-env": "^5.2.0",
+    "css-loader": "^0.28.11",
+    "eslint": "^5.4.0",
+    "eslint-plugin-vue": "^5.0.0-beta.3",
+    "file-loader": "^1.1.11",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^6.0.7",
+    "vue-loader": "^13.7.3",
+    "vue-template-compiler": "^2.5.17",
+    "webpack": "^3.12.0",
+    "webpack-dev-server": "^2.11.3"
   }
 }
