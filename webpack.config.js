@@ -9,8 +9,7 @@ module.exports = {
     filename: 'build.js'
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.css$/,
         use: [
           'vue-style-loader',
@@ -83,7 +82,7 @@ module.exports = {
   performance: {
     hints: false
   },
-  devtool: '#eval-source-map'
+  devtool: 'source-map'
 }
 
 if (process.env.NODE_ENV === 'production') {

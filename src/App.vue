@@ -34,44 +34,43 @@
 </template>
 
 <script>
-
-import { namesRef } from './firebase'
+import { namesRef } from "./firebase";
 
 export default {
-  name: 'app',
-  data () {
+  name: "app",
+  data() {
     return {
-      name: ''
-    }
+      name: ""
+    };
   },
   firebase: {
     persons: namesRef
   },
   methods: {
     submitName() {
-      namesRef.push({ name: this.name, edit: false})
-      this.name = '';
+      namesRef.push({ name: this.name, edit: false });
+      this.name = "";
     },
     removeName(key) {
       namesRef.child(key).remove();
     },
     setEditName(key) {
-      namesRef.child(key).update({ edit: true })
+      namesRef.child(key).update({ edit: true });
     },
-    cancelEdit(key){
-      namesRef.child(key).update({ edit: false })
+    cancelEdit(key) {
+      namesRef.child(key).update({ edit: false });
     },
-    saveEdit(person){
-      const key = person['.key']
-      namesRef.child(key).set({ name: person.name, edit: false })
+    saveEdit(person) {
+      const key = person[".key"];
+      namesRef.child(key).set({ name: person.name, edit: false });
     }
   }
-}
+};
 </script>
 
 <style lang="scss">
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -79,7 +78,8 @@ export default {
   margin-top: 60px;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-weight: normal;
 }
 
