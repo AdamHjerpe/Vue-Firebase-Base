@@ -5,10 +5,10 @@
       <input type="text" v-model="name" />
       <button @click="submitName()">Add</button>
     </div>
-  
+
     <div>
       <ul>
-        <li v-for="personName of persons" 
+        <li v-for="personName of persons"
         v-bind:key="personName['.key']">
         <p>{{personName.name}}</p>
 
@@ -34,38 +34,38 @@
 </template>
 
 <script>
-import { namesRef } from "./firebase";
+import { namesRef } from './firebase'
 
 export default {
-  name: "app",
-  data() {
+  name: 'app',
+  data () {
     return {
-      name: ""
-    };
+      name: ''
+    }
   },
   firebase: {
     persons: namesRef
   },
   methods: {
-    submitName() {
-      namesRef.push({ name: this.name, edit: false });
-      this.name = "";
+    submitName () {
+      namesRef.push({ name: this.name, edit: false })
+      this.name = ''
     },
-    removeName(key) {
-      namesRef.child(key).remove();
+    removeName (key) {
+      namesRef.child(key).remove()
     },
-    setEditName(key) {
-      namesRef.child(key).update({ edit: true });
+    setEditName (key) {
+      namesRef.child(key).update({ edit: true })
     },
-    cancelEdit(key) {
-      namesRef.child(key).update({ edit: false });
+    cancelEdit (key) {
+      namesRef.child(key).update({ edit: false })
     },
-    saveEdit(person) {
-      const key = person[".key"];
-      namesRef.child(key).set({ name: person.name, edit: false });
+    saveEdit (person) {
+      const key = person['.key']
+      namesRef.child(key).set({ name: person.name, edit: false })
     }
   }
-};
+}
 </script>
 
 <style lang="scss">

@@ -6,6 +6,5 @@ import VueFire from 'vuefire' // Import VueFire to connect Vue with Firebase
 Vue.use(VueFire) // Add Vuefire as a Vue plugin
 
 new Vue({
-  el: '#app',
   render: h => h(App)
-})
+}).$mount('#app')

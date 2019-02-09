@@ -1,13 +1,16 @@
-import { initializeApp } from 'firebase';
+import { initializeApp } from 'firebase'
+require('dotenv').config()
+
+console.log(process.env.API_KEY)
 
 const app = initializeApp({
-    apiKey: "AIzaSyCpO_9zsZoLvj1gBcUQ-rK8OMtJdoY0m5I",
-    authDomain: "fir-vue-199a8.firebaseapp.com",
-    databaseURL: "https://fir-vue-199a8.firebaseio.com",
-    projectId: "fir-vue-199a8",
-    storageBucket: "fir-vue-199a8.appspot.com",
-    messagingSenderId: "368975589989"
-  })
+  apiKey: process.env.VUE_APP_API_KEY,
+  authDomain: process.env.VUE_APP_AUTH_DOMAIN,
+  databaseURL: process.env.VUE_APP_DB_URL,
+  projectId: process.env.VUE_APP_PROJECT_ID,
+  storageBucket: process.env.VUE_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.VUE_APP_MESSAGING_SENDER_ID
+})
 
-  export const db = app.database()
-  export const namesRef = db.ref('persons')
+export const db = app.database()
+export const namesRef = db.ref('persons')
