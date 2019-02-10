@@ -1,7 +1,4 @@
 import { initializeApp } from 'firebase'
-require('dotenv').config()
-
-console.log(process.env.API_KEY)
 
 const app = initializeApp({
   apiKey: process.env.VUE_APP_API_KEY,
